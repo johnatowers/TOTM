@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".newItem_Fragment"
+    tools:layout_editor_absoluteY="81dp">
+
+    <RelativeLayout
+        android:id="@+id/new_item_master_relative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorLight">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/common_10_dp">
+
+            <RelativeLayout
+                android:id="@+id/new_item_first_card_relative"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/new_plans_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/alegreya_bold"
+                    android:text="@string/newPlans"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/new_item_second_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/new_plans_title"
+                    android:layout_margin="@dimen/common_10_dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/what_task_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/common_30_dp"
+                            android:layout_marginTop="@dimen/common_10_dp"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/alegreya_bold"
+                            android:text="@string/what_is_it"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/what_task_edittext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/common_10_dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toEndOf="@+id/what_task_textview"
+                            android:ems="10"
+                            android:fontFamily="@font/alegreya"
+                            android:inputType="text"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/what_day_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/what_task_textview"
+                            android:layout_alignStart="@+id/what_task_textview"
+                            android:layout_marginTop="@dimen/common_30_dp"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/alegreya_bold"
+                            android:text="@string/whatday"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp" />
+
+                        <Button
+                            android:id="@+id/daySelectSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/what_task_edittext"
+                            android:layout_alignBaseline="@+id/what_day_textview"
+                            android:layout_marginStart="@dimen/common_10_dp"
+                            android:layout_marginTop="@dimen/common_20_dp"
+                            android:layout_toEndOf="@+id/what_day_textview"
+                            android:entries="@array/select_array"
+                            android:fontFamily="@font/alegreya_bold"
+                            android:text="@string/select" />
+
+
+                        <TextView
+                            android:id="@+id/what_time_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/what_day_textview"
+                            android:layout_alignStart="@+id/what_day_textview"
+                            android:layout_marginTop="@dimen/common_30_dp"
+                            android:fontFamily="@font/alegreya_bold"
+                            android:text="@string/whattime"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp" />
+
+                        <Button
+                            android:id="@+id/timeSelectSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/daySelectSpinner"
+                            android:layout_alignBaseline="@+id/what_time_textview"
+                            android:layout_alignStart="@+id/daySelectSpinner"
+                            android:layout_marginTop="8dp"
+                            android:entries="@array/select_array"
+                            android:fontFamily="@font/alegreya_bold"
+                            android:text="@string/select"
+                            app:layout_constraintStart_toEndOf="@+id/what_time_textview"
+                            app:layout_constraintTop_toBottomOf="@+id/daySelectSpinner" />
+
+                        <TextView
+                            android:id="@+id/where_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/what_time_textview"
+                            android:layout_alignStart="@id/what_time_textview"
+                            android:layout_marginTop="@dimen/common_30_dp"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/alegreya_bold"
+                            android:text="@string/where"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/where_edittext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/timeSelectSpinner"
+                            android:layout_alignBaseline="@+id/where_textview"
+                            android:layout_alignStart="@id/timeSelectSpinner"
+                            android:layout_marginTop="8dp"
+                            android:ems="10"
+                            android:fontFamily="@font/alegreya"
+                            android:inputType="textPostalAddress"
+                            android:textAlignment="center"
+                            app:layout_constraintStart_toStartOf="@+id/timeSelectSpinner"
+                            app:layout_constraintTop_toBottomOf="@+id/timeSelectSpinner" />
+
+
+                        <TextView
+                            android:id="@+id/category_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/where_textview"
+                            android:layout_alignStart="@id/where_textview"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/alegreya_bold"
+                            android:text="@string/category"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp" />
+
+                        <Spinner
+                            android:id="@+id/category_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="45dp"
+                            android:layout_below="@+id/where_edittext"
+                            android:layout_alignStart="@id/where_edittext"
+                            android:layout_marginTop="8dp"
+                            android:entries="@array/dropdown_categories"
+                            android:fontFamily="@font/alegreya_bold"
+                            android:spinnerMode="dropdown"
+                            app:layout_constraintStart_toStartOf="@+id/where_edittext"
+                            app:layout_constraintTop_toBottomOf="@+id/where_edittext" />
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/new_item_third_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/new_item_second_card"
+                    android:layout_marginStart="@dimen/common_10_dp"
+                    android:layout_marginEnd="@dimen/common_10_dp"
+                    android:paddingTop="@dimen/common_10_dp"
+                    android:paddingBottom="@dimen/common_10_dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/reminder_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginTop="@dimen/common_20_dp"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/alegreya_bold"
+                            android:text="@string/reminder"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <Button
+                            android:id="@+id/reminder_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/common_10_dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toEndOf="@id/reminder_textview"
+                            android:entries="@array/select_array"
+                            android:fontFamily="@font/alegreya_bold"
+                            android:spinnerMode="dropdown"
+                            android:text="@string/select" />
+
+                        <TextView
+                            android:id="@+id/alarm_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/reminder_textview"
+                            android:layout_alignStart="@+id/reminder_textview"
+                            android:layout_marginTop="@dimen/common_30_dp"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/alegreya_bold"
+                            android:text="@string/alarm"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <Button
+                            android:id="@+id/alarm_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/reminder_spinner"
+                            android:layout_alignBaseline="@+id/alarm_textview"
+                            android:layout_alignStart="@id/reminder_spinner"
+                            android:layout_marginTop="8dp"
+                            android:entries="@array/select_array"
+                            android:fontFamily="@font/alegreya_bold"
+                            android:spinnerMode="dropdown"
+                            android:text="@string/select" />
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <Button
+                    android:id="@+id/create_event_button"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/new_item_third_card"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="18dp"
+                    android:fontFamily="@font/alegreya_bold"
+                    android:text="@string/newEvent" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLight"
+    tools:context=".calendarLayout_Fragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/common_10_dp"
+        android:background="@color/white">
+
+        <android.support.v7.widget.CardView
+            android:layout_margin="@dimen/common_10_dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/common_10_dp"
+                    android:background="@color/white">
+
+                    <CalendarView
+                        android:id="@+id/calendarView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-20dp" />
+
+                    <View
+                        android:id="@+id/line1_calendar_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/calendarView"
+                        android:background="@android:color/black" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/rows_relative"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line1_calendar_layout"
+                        android:background="@color/colorLight">
+
+                        <RelativeLayout
+
+                            android:id="@+id/bug_fix"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/common_10_dp"
+                            android:background="@color/white">
+
+
+                            <TextView
+                                android:id="@+id/school_textview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:fontFamily="@font/alegreya_bold"
+                                android:text="@string/school"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TableLayout
+                                android:id="@+id/school_table"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/school_textview">
+
+                                <TableRow>
+
+                                    <CheckBox
+                                        android:scaleX=".6"
+                                        android:scaleY=".6" />
+
+                                    <TextView
+                                        android:fontFamily="@font/alegreya"
+                                        android:text="School Table Layout"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+                                </TableRow>
+                            </TableLayout>
+
+                            <View
+                                android:id="@+id/line2"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_below="@id/school_table"
+                                android:background="@android:color/black" />
+
+                            <TextView
+                                android:id="@+id/errands_textview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/line2"
+                                android:layout_marginStart="5dp"
+                                android:fontFamily="@font/alegreya_bold"
+                                android:text="@string/errands"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TableLayout
+                                android:id="@+id/errands_table"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/errands_textview">
+
+                                <TableRow>
+
+                                    <CheckBox
+                                        android:scaleX=".6"
+                                        android:scaleY=".6" />
+
+                                    <TextView
+                                        android:fontFamily="@font/alegreya"
+                                        android:text="Errands Table Layout"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+                                </TableRow>
+                            </TableLayout>
+
+                            <View
+                                android:id="@+id/line3"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_below="@id/errands_table"
+                                android:background="@android:color/black" />
+
+                            <TextView
+                                android:id="@+id/phone_calls_textview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/line3"
+                                android:layout_marginStart="5dp"
+                                android:fontFamily="@font/alegreya_bold"
+                                android:text="@string/phone_calls"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TableLayout
+                                android:id="@+id/phone_calls_table"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/phone_calls_textview">
+
+                                <TableRow>
+
+                                    <CheckBox
+                                        android:scaleX=".6"
+                                        android:scaleY=".6" />
+
+                                    <TextView
+                                        android:fontFamily="@font/alegreya"
+                                        android:text="Phone Calls Table Layout"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+                                </TableRow>
+                            </TableLayout>
+
+                            <View
+                                android:id="@+id/line4"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_below="@id/phone_calls_table"
+                                android:background="@android:color/black" />
+
+                            <TextView
+                                android:id="@+id/other_textview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/phone_calls_table"
+                                android:layout_marginStart="5dp"
+                                android:fontFamily="@font/alegreya_bold"
+                                android:text="@string/other"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TableLayout
+                                android:id="@+id/other_table"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/other_textview">
+
+                                <TableRow>
+
+                                    <CheckBox
+                                        android:scaleX=".6"
+                                        android:scaleY=".6" />
+
+                                    <TextView
+                                        android:fontFamily="@font/alegreya"
+                                        android:text="Other Table Layout"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+                                </TableRow>
+                            </TableLayout>
+
+
+                            <View
+                                android:id="@+id/line5"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_below="@id/other_table"
+                                android:background="@android:color/black" />
+
+                            <TextView
+                                android:id="@+id/completed_textview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/other_table"
+                                android:layout_marginStart="5dp"
+                                android:fontFamily="@font/alegreya_bold"
+                                android:text="@string/completed"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TableLayout
+                                android:id="@+id/completed_table"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/completed_textview">
+
+                                <TableRow>
+
+                                    <CheckBox
+                                        android:scaleX=".6"
+                                        android:scaleY=".6" />
+
+                                    <TextView
+                                        android:fontFamily="@font/alegreya"
+                                        android:text="Completed Table Layout"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+                                </TableRow>
+                            </TableLayout>
+
+                            <!--<View-->
+                                <!--android:id="@+id/line6"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="1dp"-->
+                                <!--android:layout_below="@id/completed_table"-->
+                                <!--android:background="@android:color/black" />-->
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+</FrameLayout>
