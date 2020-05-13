@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settings_master_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".settings_Fragment">
+
+    <RelativeLayout
+        android:id="@+id/settings_master_relative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorLight">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/common_10_dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/Title_Settings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="160dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/alegreya_bold"
+                    android:text="@string/settings"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/switches_cardview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="220sp"
+                    android:layout_below="@id/Title_Settings"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="@dimen/common_20_dp"
+                    android:layout_marginTop="45dp"
+                    android:layout_marginEnd="@dimen/common_20_dp"
+                    android:paddingBottom="@dimen/common_10_dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Switch
+                            android:id="@+id/Disable_Notifications_Switch"
+                            android:layout_width="340dp"
+                            android:layout_height="32dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="24dp"
+                            android:fontFamily="@font/alegreya_bold"
+                            android:text="@string/disable_notification"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="italic" />
+
+                        <Switch
+                            android:id="@+id/Toggle_Dark_Theme"
+                            android:layout_width="340dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/Disable_Notifications_Switch"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/alegreya_bold"
+                            android:text="@string/enable_dark_theme"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="italic" />
+
+                        <Button
+                            android:id="@+id/Feedback_Button"
+                            android:layout_width="278dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/Toggle_Dark_Theme"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/alegreya_bold"
+                            android:text="@string/toggle_feedback" />
+
+                        <Button
+                            android:id="@+id/Clear_Events_Button"
+                            android:layout_width="278dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/Feedback_Button"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/alegreya_bold"
+                            android:text="@string/clear_events" />
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

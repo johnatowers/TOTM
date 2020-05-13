@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:layout_marginBottom="5dp"
+    >
+
+    <CheckBox
+        android:id="@+id/new_task_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="25dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="3dp"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/new_task_name_textview"
+        android:text="Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="3dp"
+        android:fontFamily="@font/alegreya"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/new_task_day_textview"
+        android:text="Day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="3dp"
+        android:fontFamily="@font/alegreya"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/new_task_time_textview"
+        android:text="Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="3dp"
+        android:fontFamily="@font/alegreya"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/new_task_where_textview"
+        android:text="Where"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:fontFamily="@font/alegreya"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/new_task_index_ID_in_saved_events"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:visibility="invisible"
+        android:fontFamily="@font/alegreya"
+        android:textColor="@color/black"
+        />
+
+
+
+
+    <!--<Button-->
+        <!--android:id="@+id/newTagButton"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:width="217dp"-->
+        <!--android:onClick="onClick" />-->
+
+    <!--<Button-->
+        <!--android:id="@+id/newEditButton"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:width="50dp"-->
+        <!--android:onClick="onClick"-->
+        <!--android:text="@string/edit" />-->
+
+    <!--<Button-->
+        <!--android:id="@+id/newDeleteButton"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginEnd="5dp"-->
+        <!--android:width="50dp"-->
+        <!--android:onClick="onClick"-->
+        <!--android:text="@string/delete" />-->
+
+</TableRow>
